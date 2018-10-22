@@ -1,18 +1,18 @@
-Ball ball = new Ball(250,250);
+Ball ball = new Ball(250,250, 25);
 
-void setup(){
+public void setup(){
  size(500,600);
  ellipseMode(CENTER);
 }
 
-void draw (){
+public void draw (){
   
   ball.step();
   
   background(0);
-  ellipse(ball.x, ball.y, 25, 25);
+  ellipse(ball.getX(), ball.getY(), ball.getDiameter(), ball.getDiameter());
   
-}
+  }
 
 void mouseClicked() {
   
