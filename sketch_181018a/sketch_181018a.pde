@@ -11,8 +11,10 @@ void draw (){
   
   background(0);
   ellipse(ball.x, ball.y, 25, 25);
+  
+}
 
-void mouseClicked(){
+void mouseClicked() {
   
  ball.targetX = mouseX;
  ball.targetY = mouseY;

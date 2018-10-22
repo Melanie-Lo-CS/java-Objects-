@@ -6,7 +6,7 @@ class Ball{
   int targetY = 250;
   
   void step() {
- if(x < targetX)
+ if(x < targetX){
    x++;
   }else{
    x--;
