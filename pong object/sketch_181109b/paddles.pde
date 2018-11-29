@@ -1,0 +1,5 @@
+class paddles{
+  float x;
+  
+  
+}
