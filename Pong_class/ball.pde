@@ -16,10 +16,10 @@ class Ball {
     xSpeed = 1;
     ySpeed = 1;
     score = 0;
-   }
-  
+  }
+
   void step() {
-    
+
     x += xSpeed;
     y += ySpeed;
 
@@ -30,12 +30,35 @@ class Ball {
       ySpeed *= -1;
     }
 
+    if (x - diameter > LeftPaddle.x && x - diameter < LeftPaddle.x + LeftPaddle.padwidth && y +diameter > LeftPaddle.y && y - diameter < LeftPaddle.y + LeftPaddle.padHeight) {
+      xSpeed *= -1;
+    }
+    if (x + diameter > RightPaddle.x && x - diameter < RightPaddle.x + RightPaddle.padwidth && y + diameter > RightPaddle.y &&  y - diameter < RightPaddle.y + RightPaddle.padHeight) {
+      xSpeed *= -1;
+    }
 
- }
- 
- 
+    if (Ball1.x == 0) {
+      score += 1;
+      x = 350;
+      y= 300;
+    }
+    if (Ball2.x == 0) {
+      score += 1;
+      x = 350;
+      y= 300;
+    }
+
+    // score for p2
+    if (Ball1.x == 700) {
+      score += 1;
+      x = 350;
+      y= 300;
+    }
+
+    if (Ball2. x == 700) {
+      score += 1;
+      x = 350;
+      y= 300;
+    }
   }
-
- 
-
- 
+}

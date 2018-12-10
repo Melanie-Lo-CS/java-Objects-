@@ -1,11 +1,11 @@
 ArrayList <Shape> shapes = new ArrayList<Shape>();
 
-Shape triangle = new Shape (50,70) {
-void draw(){
- fill(random(255),random(255),random(255));
-  triangle(x ,y ,x-10, y+10, x+10, y+10);
- }
-};
+/*Shape triangle = new Shape(50, 70) {
+  void draw() {
+    fill(random(255), random(255), random(255));
+    triangle(x, y, x-10, y+10, x+10, y+10);
+  }
+};*/
 
 void setup() {
   size(500, 600);
@@ -13,13 +13,22 @@ void setup() {
   rectangle rRGB = new rectangle (width*1/4, height*1/4, width*1/5, height*1/5, color(random(255), random(255), random(255)));//small shape
   Circle cRGB = new Circle (width* 3/16, height*1/15, width*2/15, color(random(255), random(255), random(255)));
   Circle CRGB = new Circle (width* 11/11, height*1/5, width*1/5, color(random(255), random(255), random(255)));
-  
+
+
+Shape triangle = new Shape(50, 70) {
+  public void draw() {
+    fill(random(255), random(255), random(255));
+    triangle(x, y, x-10, y+10, x+10, y+10);
+  }
+  public void step() {}
+};
+
   shapes.add(rHex);
- shapes.add(rRGB);
+  shapes.add(rRGB);
   shapes.add(cRGB);
   shapes.add(CRGB);
-  Shape.add(triangle);
-  
+  shapes.add(triangle);
+
   ellipseMode(RADIUS);
   ellipseMode(RADIUS);
 }
@@ -30,7 +39,6 @@ void draw() {
   for (int i = 0; i <shapes.size(); i++) {
     shapes.get(i).draw();
     shapes.get(i).step();
-
   }
 }
 
