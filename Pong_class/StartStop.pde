@@ -3,6 +3,8 @@ void StartStop() {
     if (key == ' '){
     start = true;
     }
+    
+    
   }
 if (keyPressed) {
   if (key == 'q' || key == 'Q') {

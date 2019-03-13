@@ -6,7 +6,6 @@ class Ball {
   float xSpeed;
   float ySpeed;
   float score;
-  boolean fire = false;
 
 
   Ball(float x, float y, color myColour) {
@@ -20,9 +19,7 @@ class Ball {
   }
 
   void step() {
-    for (int i = 0; i < fireworks.length; i++) {
-    fireworks[i]=new firework(width/2,height/2);
-  }
+    
     x += xSpeed;
     y += ySpeed;
 
@@ -43,29 +40,33 @@ class Ball {
 
     if (x <= 0 ) {      
       score2 +=1;
+      for (int i = 0; i < fireworks.length; i++) {
+        fireworks[i].reset();
+      }
       fire = true;
+      start = false;
+      
       x = width/2;
       y = height/2;
     }
+      
+    
 
 
 
     if (x >= width) {
+      for (int i = 0; i < fireworks.length; i++) {
+        fireworks[i].reset();
+      }
+      start = false;
       score1 += 1;
       fire = true;
       x = width/2;
     y = height/2;
     }
     
-    if (fire) {
-      for (int i = 0; i < fireworks.length; i++) {
-        fireworks[i].step();
-      }
-      for (int i = 0; i < fireworks.length; i++) {
-        fireworks[i].draw();
-     }
-     fire = false;
-    }
+    
+    
     
   }
 }
