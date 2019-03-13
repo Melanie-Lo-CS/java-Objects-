@@ -11,10 +11,9 @@ class firework{
   //Procedures and functions
   
   firework(float height, float width) {
+    this.x = Ball1.x;
+    this.y = Ball1.y;
    //x and y are values when pong ball scores
-    this.x = mouseX;
-    this.y = mouseY;
-    
    
     this.Xspeed = random(-10,10); 
     this.Yspeed = random(-10,10);
@@ -22,7 +21,7 @@ class firework{
    
     this.diameter = random(width*1/25);
     
-    gravity = 0.5;
+    gravity = 10;
    }
     void draw(){
    fill(c);

@@ -1,11 +1,11 @@
-firework[]fireworks=new firework[100000];
+firework[]fireworks=new firework[100];
 
 
 
 void setup(){
   size(500,600);
   for (int i = 0; i < fireworks.length; i++) {
-    fireworks[i]=new firework(width,height);
+    fireworks[i]=new firework(mouseX,mouseY);
   }
 } 
 
@@ -20,7 +20,7 @@ void draw(){
 }
     void mouseClicked(){
   for (int i = 0; i < fireworks.length; i++) {
- fireworks[i] = new firework (width,height);
+ fireworks[i] = new firework (mouseX,mouseY);
     
   }
     }
