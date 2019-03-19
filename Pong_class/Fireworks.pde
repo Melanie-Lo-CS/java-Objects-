@@ -21,7 +21,7 @@ class firework {
 
     this.diameter = random(width*1/25);
 
-    gravity = .5;
+    gravity = 10;
   }
   void draw() {
     fill(c);
