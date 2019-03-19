@@ -23,9 +23,7 @@ class Ball {
     x += xSpeed;
     y += ySpeed;
 
-    //    if (x+xSpeed < 0 || x+xSpeed > width) {
-    //      xSpeed *= -1;
-    //    }
+ 
     if (y+ySpeed < 0 || y+ySpeed > height) {
       ySpeed *= -1;
     }

@@ -1,7 +1,7 @@
 Boolean start = false;
 Boolean fire = false;
 Ball Ball1 = new Ball(350, 300, color(0, 255, 0));
-//Ball Ball2 = new Ball(350, 320, color(0, 255, 0));
+Ball Ball2 = new Ball(350, 320, color(0, 255, 0));
 leftPaddle LeftPaddle = new leftPaddle();
 rightPaddle RightPaddle = new rightPaddle();
 int score1 = 0;
@@ -30,7 +30,7 @@ void draw() {
   //arithemetic to calcaulte starting positions of paddles and ball
   background(0);
 
-  //ellipse(Ball2.x, Ball2.y, Ball2.diameter, Ball2.diameter);
+ 
 
   rectMode(CENTER);
   fill(LeftPaddle.colour);
@@ -38,11 +38,6 @@ void draw() {
   LeftPaddle.leftMove();
 
   RightPaddle.rightMove();
-
-
-
-  //Ball2.step();
-
 
   rectMode(CENTER);
   fill(RightPaddle.colour);
@@ -56,9 +51,9 @@ void draw() {
   println(" P1 score: " + int(Ball1.score) + " P2 score: ");
 
   if (start==true) {
-    fill(Ball1.colour);
-    //fill(Ball2.colour);
+   
     Ball1.step();
+    
     ellipse(Ball1.x, Ball1.y, Ball1.diameter, Ball1.diameter);
   } else {
     if (fire) {
@@ -71,4 +66,7 @@ void draw() {
       }
     }
   }
+  
+   Ball2.step();
+   ellipse(Ball2.x, Ball2.y, Ball2.diameter, Ball2.diameter);
 }

@@ -1,4 +1,4 @@
-/*class Ball2 {
+class Ball2 {
   float x ;
   float y ;
   float diameter ;
@@ -22,6 +22,10 @@
 
     x += xSpeed;
     y += ySpeed;
+    
+    if (y+ySpeed < 0 || y+ySpeed > height) {
+      ySpeed *= -1;
+    }
 
     if (x - diameter/2 > LeftPaddle.x - LeftPaddle.padwidth/2&& x - diameter/2 < LeftPaddle.x + LeftPaddle.padwidth/2 && y +diameter/2 > LeftPaddle.y && y - diameter/2 < LeftPaddle.y + LeftPaddle.padHeight/2) {
       xSpeed *= -1;
@@ -29,13 +33,29 @@
     if (x + diameter/2 > RightPaddle.x + RightPaddle.padwidth/2 && x + diameter/2 < RightPaddle.x - RightPaddle.padwidth/2 && y - diameter/2 > RightPaddle.y + RightPaddle.padHeight/2 &&  y + diameter/2 < RightPaddle.y - RightPaddle.padHeight/2) {
       xSpeed *= -1;
     }
-
-    if (Ball2.x <= 0) {
-      score2 += 1;
+    
+    if (x <= 0 ) {      
+      score2 +=1;
+      for (int i = 0; i < fireworks.length; i++) {
+        fireworks[i].reset();
+      }
+      fire = true;
+      start = false;
+      
+      x = width/2;
+      y = height/2;
     }
-    if (Ball2.x >= 0) {
+
+     if (x >= width) {
+      for (int i = 0; i < fireworks.length; i++) {
+        fireworks[i].reset();
+      }
+      start = false;
       score1 += 1;
+      fire = true;
+      x = width/2;
+      y = height/2;
+    
     }
   }
 }
-*/
