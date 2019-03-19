@@ -1,7 +1,7 @@
 Boolean start = false;
 Boolean fire = false;
 Ball Ball1 = new Ball(350, 300, color(0, 255, 0));
-Ball Ball2 = new Ball(350, 320, color(0, 255, 0));
+Ball Ball2 = new Ball(350, 300, color(0, 255, 0));
 leftPaddle LeftPaddle = new leftPaddle();
 rightPaddle RightPaddle = new rightPaddle();
 int score1 = 0;
