@@ -16,7 +16,6 @@ void setup() {
 
   //screenChecker();
 
-
   //Code to change "Start" Boolean Variable to true
 
   for (int i = 0; i < fireworks.length; i++) {
@@ -24,7 +23,6 @@ void setup() {
   }
 }
 void draw() {
-
 
   StartStop();
   //arithemetic to calcaulte starting positions of paddles and ball
@@ -38,11 +36,6 @@ void draw() {
   LeftPaddle.leftMove();
 
   RightPaddle.rightMove();
-
-
-
-  Ball2.step();
-
 
   rectMode(CENTER);
   fill(RightPaddle.colour);
@@ -59,6 +52,7 @@ void draw() {
     fill(Ball1.colour);
     fill(Ball2.colour);
     Ball1.step();
+    Ball2.step();
     ellipse(Ball1.x, Ball1.y, Ball1.diameter, Ball1.diameter);
   } else {
     if (fire) {

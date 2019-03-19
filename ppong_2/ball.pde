@@ -49,9 +49,6 @@ class Ball {
     }
       
     
-
-
-
     if (x >= width) {
       for (int i = 0; i < fireworks.length; i++) {
         fireworks[i].reset();
