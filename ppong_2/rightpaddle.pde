@@ -4,6 +4,7 @@ class rightPaddle {
   int padwidth;
   int padHeight;
   color colour;
+  float diameter;
 
   rightPaddle() {
     x=690;
@@ -14,6 +15,10 @@ class rightPaddle {
   }
 
   void rightMove() {
+    
+     if (x + diameter/2 > RightPaddle.x && x - diameter/2 < RightPaddle.x + RightPaddle.padwidth/2 && y + diameter/2 > RightPaddle.y &&  y - diameter/2 < RightPaddle.y + RightPaddle.padHeight/2) {
+      
+    }
 
     if (keyPressed) {
       if ( keyCode == UP) {

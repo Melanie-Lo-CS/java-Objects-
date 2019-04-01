@@ -4,6 +4,7 @@ class leftPaddle {
   int padwidth;
   int padHeight;
   color colour;
+  float diameter;
 
   leftPaddle() {
     x=10;
@@ -15,6 +16,9 @@ class leftPaddle {
 
   void leftMove() {
 
+      if (x + diameter/2 > LeftPaddle.x && x - diameter/2 < LeftPaddle.x + LeftPaddle.padwidth/2 && y +diameter/2 > LeftPaddle.y && y - diameter/2 < LeftPaddle.y + LeftPaddle.padHeight/2) {
+      }
+    
     if (keyPressed) {
       if ( key == 'w') {
 
