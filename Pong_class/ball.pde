@@ -28,7 +28,7 @@ class Ball {
       ySpeed *= -1;
     }
 
-    if (x - diameter/2 > LeftPaddle.x && x - diameter/2 < LeftPaddle.x + LeftPaddle.padwidth/2 && y +diameter/2 > LeftPaddle.y && y - diameter/2 < LeftPaddle.y + LeftPaddle.padHeight/2) {
+    if (x - diameter/2> LeftPaddle.x && x - diameter/2 < LeftPaddle.x + LeftPaddle.padwidth/2 && y +diameter/2 > LeftPaddle.y && y - diameter/2 < LeftPaddle.y + LeftPaddle.padHeight/2) {
       xSpeed *= -1;
     }
     if (x + diameter/2 > RightPaddle.x && x - diameter/2 < RightPaddle.x + RightPaddle.padwidth/2 && y + diameter/2 > RightPaddle.y &&  y - diameter/2 < RightPaddle.y + RightPaddle.padHeight/2) {

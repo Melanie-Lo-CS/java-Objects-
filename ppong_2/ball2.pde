@@ -48,10 +48,7 @@ class Ball2 {
       y = height/2;
     }
       
-    
-
-
-
+   
     if (x >= width) {
       for (int i = 0; i < fireworks.length; i++) {
         fireworks[i].reset();

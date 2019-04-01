@@ -36,13 +36,23 @@ void draw() {
   fill(LeftPaddle.colour);
   rect(LeftPaddle.x, LeftPaddle.y, LeftPaddle.padwidth, LeftPaddle.padHeight);
   LeftPaddle.leftMove();
+  rectMode(CENTER);
+  fill(LeftPaddle.colour);
+  rect(LeftPaddle.x, LeftPaddle.y, LeftPaddle.padwidth, LeftPaddle.padHeight);
+  LeftPaddle.leftMove();
 
-  RightPaddle.rightMove();
+
+  
 
   rectMode(CENTER);
   fill(RightPaddle.colour);
   rect(RightPaddle.x, RightPaddle.y, RightPaddle.padwidth, RightPaddle.padHeight);
-
+  RightPaddle.rightMove();
+  rectMode(CENTER);
+  fill(RightPaddle.colour);
+  rect(RightPaddle.x, RightPaddle.y, RightPaddle.padwidth, RightPaddle.padHeight);
+  RightPaddle.rightMove();
+  
   //printing score
   fill(175, 100, 220);
   textSize(0.1*width);
